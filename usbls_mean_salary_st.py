@@ -59,7 +59,7 @@ st.plotly_chart(fig2)
 
 st.markdown("Salary data is normalized by dividing the mean salary by the cost of living index for each state.")
 st.title("")
-st.markdown("**Here's the same data displayed in a table**")
+st.markdown("        **Here's the same data displayed in a table**")
 
 
 
