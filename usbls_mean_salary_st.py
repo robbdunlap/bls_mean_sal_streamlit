@@ -2,22 +2,18 @@
 
 import pandas as pd
 import streamlit as st
-import os
 import plotly.graph_objects as go
 
 ## Data input and readying
-
-# import job category titles 
-path_parent = os.path.dirname(os.getcwd())
-path_to_cats = path_parent + '/job_cat_titles.csv'
-job_titles_df = pd.read_csv(path_to_cats)
+job_titles_df = pd.read_csv('job_cat_titles.csv')
 job_cat_titles = job_titles_df.iloc[:,1].to_list()
 
 # import salary data
-path_to_sal = path_parent + '/normalized_mean_salary.csv'
-states_only_df = pd.read_csv(path_to_sal)
+states_only_df = pd.read_csv('normalized_mean_salary.csv')
 
 states_only_df = states_only_df.rename(columns={'PRIM_STATE':'State','A_MEAN':'Mean Salary','norm_sal_mean':'Normalized Mean Salary'})
+
+print(job_cat_titles)
 print(states_only_df.head(3))
 
 
